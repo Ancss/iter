@@ -1,0 +1,35 @@
+{
+  "name": "iter",
+  "version": "1.0.0",
+  "description": "Traversal using for of syntax, supports pause and start at any time",
+  "type": "module",
+  "exports": "./index.js",
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ancss/iter.git"
+  },
+  "keywords": [
+    "iter",
+    "iterator",
+    "generator",
+    "for",
+    "for of",
+    "for in"
+  ],
+  "author": "Ancss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ancss/iter/issues"
+  },
+  "homepage": "https://github.com/Ancss/iter#readme"
+}

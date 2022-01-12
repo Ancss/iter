@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iter</title>
+</head>
+
+<body>
+  <h1>Use Iter to implement a flashing traffic light case</h1>
+  <h1>使用Iter实现一个闪烁的红绿灯案例</h1>
+  <div id="app" style="background-color: red;width: 100px;height: 100px;"></div>
+  <script type="module">
+    import Iter, { createIter } from './index.js'
+    var lights = [
+      {
+        color: 'red',
+        time: 3000
+      },
+      {
+        color: 'yellow',
+        time: 1000
+      },
+      {
+        color: 'green',
+        time: 3000
+      },
+    ];
+    (async () => {
+      var ls = createIter(lights)
+      setTimeout(() => {
+        console.log('pause')
+        ls.pause()
+      }, 5000);
+      setTimeout(() => {
+        console.log('play')
+        ls.play()
+      }, 10000);
+      setTimeout(() => {
+        console.log('stop')
+        ls.stop()
+      }, 15000);
+      for await (let value of ls) {
+        console.log(value.color)
+        app.style.backgroundColor = value.color
+        await new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve()
+          }, value.time)
+        })
+      }
+    })()
+  </script>
+</body>
+
+</html>
