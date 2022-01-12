@@ -1,5 +1,5 @@
 # Itor
-Using `for of` syntax itorator instance, supports pause and start at any time
+Using `for of` syntax iterator instance, supports pause and start at any time
 
 使用`for of`语法迭代实例，支持随时暂停和启动
 
@@ -11,7 +11,7 @@ $ npm install Itor
 
 ## Usage
 ```js
-import { createItor } from 'Itor'
+import Itor, { createItor } from 'Itor'
 
 var lights = [
   {
@@ -28,7 +28,7 @@ var lights = [
   },
 ];
 (async () => {
-  var ls = createItor(lights)
+  var ls = createItor(lights) // || new Itor(lights)
   for await (let value of ls) {
     console.log(value.color)//loop:red=>yellow=>green
     await new Promise((resolve, reject) => {
