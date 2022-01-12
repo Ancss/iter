@@ -1,11 +1,11 @@
-export default class Iter {
+export default class Itor {
   constructor(value) {
     this._value = value
     this._stop = false
     this._resolve = null
     this._promise = null
   }
-  [Symbol.asyncIterator]() {
+  [Symbol.asyncItorator]() {
     let index = 0
     return {
       next: async () => {
@@ -32,6 +32,6 @@ export default class Iter {
     this._stop = true
   }
 }
-export function createIter(value) {
-  return new Iter(value)
+export function createItor(value) {
+  return new Itor(value)
 }

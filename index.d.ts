@@ -1,12 +1,12 @@
-export default class Iter<T> {
+export default class Itor<T> {
   /**
-  A async pauseable iterator
+  A async pauseable itorator
 
-	The instance is an [`Iterable`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Iteration_protocols) of `[key, value]` pairs so you can use it directly in a [`for…of`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/for...of) loop.
+	The instance is an [`Itorable`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Itoration_protocols) of `[key, value]` pairs so you can use it directly in a [`for…of`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/for...of) loop.
 
 	@example
 	```js
-	import Iter from './index.js'
+	import Itor from './index.js'
   var lights = [
     {
       color: 'red',
@@ -22,7 +22,7 @@ export default class Iter<T> {
     },
   ];
   (async () => {
-    var ls = new Iter(lights)
+    var ls = new Itor(lights)
     for await (let value of ls) {
       await new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -41,4 +41,4 @@ export default class Iter<T> {
   [Symbol.asyncIterator](): IterableIterator<T>;
 }
 
-export function createIter<T>(value: T[]): Iter<T>;
+export function createItor<T>(value: T[]): Itor<T>;

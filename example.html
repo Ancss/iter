@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iter</title>
+  <title>Itor</title>
 </head>
 
 <body>
-  <h1>Use Iter to implement a flashing traffic light case</h1>
-  <h1>使用Iter实现一个闪烁的红绿灯案例</h1>
+  <h1>Use Itor to implement a flashing traffic light case</h1>
+  <h1>使用Itor实现一个闪烁的红绿灯案例</h1>
   <div id="app" style="background-color: red;width: 100px;height: 100px;"></div>
   <script type="module">
-    import Iter, { createIter } from './index.js'
+    import Itor, { createItor } from './index.js'
     var lights = [
       {
         color: 'red',
@@ -29,7 +29,7 @@
       },
     ];
     (async () => {
-      var ls = createIter(lights)
+      var ls = createItor(lights)
       setTimeout(() => {
         console.log('pause')
         ls.pause()

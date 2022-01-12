@@ -1,7 +1,7 @@
 {
-  "name": "iter",
+  "name": "itor",
   "version": "1.0.0",
-  "description": "Traversal using for of syntax, supports pause and start at any time",
+  "description": "Using `for of` syntax itorator instance, supports pause and start at any time",
   "type": "module",
   "exports": "./index.js",
   "engines": {
@@ -16,11 +16,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ancss/iter.git"
+    "url": "git+https://github.com/Ancss/itor.git"
   },
   "keywords": [
-    "iter",
-    "iterator",
+    "itor",
+    "itorator",
     "generator",
     "for",
     "for of",
@@ -29,7 +29,7 @@
   "author": "Ancss",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Ancss/iter/issues"
+    "url": "https://github.com/Ancss/itor/issues"
   },
-  "homepage": "https://github.com/Ancss/iter#readme"
+  "homepage": "https://github.com/Ancss/itor#readme"
 }
