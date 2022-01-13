@@ -1,4 +1,6 @@
-import Itor, { createItor } from './index.js'
+// import Itor, { createItor } from './index.js'
+import { createItor } from "https://deno.land/x/itor/index.js";
+
 var lights = [
   {
     color: 'red',

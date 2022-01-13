@@ -1,6 +1,6 @@
 {
   "name": "itor",
-  "version": "1.0.01",
+  "version": "1.0.02",
   "description": "Using `for of` syntax iterator instance, supports pause and start at any time",
   "type": "module",
   "exports": "./index.js",
