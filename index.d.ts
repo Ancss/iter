@@ -6,7 +6,7 @@ export default class Itor<T> {
 
 	@example
 	```js
-	import Itor from './index.js'
+	import Itor from 'itor'
   var lights = [
     {
       color: 'red',
@@ -21,16 +21,15 @@ export default class Itor<T> {
       time: 3000
     },
   ];
-  (async () => {
-    var ls = new Itor(lights)
-    for await (let value of ls) {
-      await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve()
-        }, value.time)
-      })
-    }
-  })()
+  for await (let value of ls) {
+    console.log(value.color)
+    await new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve()
+      }, value.time)
+    })
+  }
+
 	```
 	*/
   constructor(_value: T[]);
@@ -38,7 +37,7 @@ export default class Itor<T> {
   pause: () => void;
   play: () => void;
   stop: () => void;
-  [Symbol.asyncIterator](): IterableIterator<T>;
+  [Symbol.asyncIterator](): AsyncIterableIterator<T>;
 }
 
 export function createItor<T>(value: T[]): Itor<T>;

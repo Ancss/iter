@@ -27,17 +27,15 @@ var lights = [
     time: 3000
   },
 ];
-(async () => {
-  var ls = createItor(lights) // || new Itor(lights)
-  for await (let value of ls) {
-    console.log(value.color)//loop:red=>yellow=>green
-    await new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve()
-      }, value.time)
-    })
-  }
-})()
+var ls = createItor(lights) // || new Itor(lights)
+for await (let value of ls) {
+  console.log(value.color)//loop:red=>yellow=>green
+  await new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve()
+    }, value.time)
+  })
+}
 ```
 
 ## API
