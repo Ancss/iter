@@ -5,7 +5,7 @@ export default class Itor {
     this._resolve = null
     this._promise = null
   }
-  [Symbol.asyncItorator]() {
+  [Symbol.asyncIterator]() {
     let index = 0
     return {
       next: async () => {
