@@ -6,12 +6,16 @@ Using `for of` syntax iterator instance, supports pause and start at any time
 
 ## Install
 ```shell
-$ npm install Itor
+# npm
+$ npm install itor
+
+# deno
+import {createItor} from "https://deno.land/x/itor/index.js";
 ```
 
 ## Usage
 ```js
-import Itor, { createItor } from 'Itor'
+import Itor, { createItor } from 'itor'
 
 var lights = [
   {
